@@ -1,0 +1,45 @@
+{
+  "name": "mascara",
+  "version": "1.0.0",
+  "description": "multiplex a stream context as rpc arguments",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test-suite && npm run linter",
+    "test-suite": "mocha test --exit",
+    "coverage": "istanbul cover _mocha test",
+    "linter": "eslint --no-config-lookup ./index.js ./test/index.js",
+    "generate-docs": "mkdir -p ./docs && rm -r ./docs && jsdoc index.js -r -c .jsdoc.json --verbose -d ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/161chihuahuas/masscara.git"
+  },
+  "keywords": [
+    "json-rpc",
+    "rpc",
+    "ipc",
+    "streams"
+  ],
+  "author": "Lily Anne Hall <161chihuahuas@disroot.org>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/161chihuahua/mascara/issues"
+  },
+  "homepage": "https://gitlab.com/161chihuahuas/mascara#readme",
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "clean-jsdoc-theme": "^4.3.0",
+    "eslint": "^9.27.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^4.0.4",
+    "mocha": "^11.4.0",
+    "sinon": "^20.0.0"
+  },
+  "dependencies": {
+    "jsonrpc-lite": "^1.2.3",
+    "uuid": "^3.0.1"
+  }
+}
