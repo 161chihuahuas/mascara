@@ -1,5 +1,5 @@
 {
-  "name": "mascara",
+  "name": "@tacticalchihuahua/mascara",
   "version": "1.0.0",
   "description": "multiplex a stream context as rpc arguments",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/161chihuahuas/masscara.git"
+    "url": "git+https://github.com/161chihuahuas/mascara.git"
   },
   "keywords": [
     "json-rpc",
