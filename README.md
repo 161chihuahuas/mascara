@@ -1,7 +1,4 @@
-# mascara
-
-## multiplex a stream context as rpc arguments
-
+# mascara *multiplex a stream context as rpc arguments*
 
 ```
 npm install @tacticalchihuahua/mascara --save
