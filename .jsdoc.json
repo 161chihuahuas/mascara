@@ -10,7 +10,7 @@
     "template": "./node_modules/clean-jsdoc-theme",
     "theme_opts": {
       "default_theme": "dark",
-      "homepageTitle": "mascara ~ multiplex a stream context as rpc arguments"
+      "homepageTitle": "👁️‍🗨️ mascara ~ make a stream context an rpc argument"
     }
   },
   "markdown": {
