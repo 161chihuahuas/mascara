@@ -6,7 +6,7 @@ const { Server, Client } = require('..');
 const { Writable, Readable } = require('stream');
 
 
-describe('@module mascara', function() {
+describe('@module scarf', function() {
 
   const rs = new Readable({ read: () => null, objectMode: true });
   let ws = null;

@@ -1,3 +1,8 @@
+/**
+ * a JSON-RPC variant with support for streams.
+ * @module scarf
+ */
+
 'use strict';
 
 const { Stream, Transform, Readable } = require('node:stream');
@@ -63,7 +68,7 @@ function _createStreamPointer(ctx, stream, serializer) {
   let id = uuid();
   let readable = typeof stream.read === 'function';
   let type = readable ? 'readable' : 'writable';
-  let pointer = `mascara://${id}.${type}`;
+  let pointer = `scarf://${id}.${type}`;
 
   ctx.streams.set(pointer, stream);
 
@@ -117,9 +122,9 @@ class Server extends EventEmitter {
    */
 
   /**
-   * Implementation of a mascara server. Takes an API definition
+   * Implementation of a scarf server. Takes an API definition
    * and routes JSON-RPC messages to their handlers, automatically
-   * transforming mascara:// links into streams.
+   * transforming scarf:// links into streams.
    * @extends EventEmitter
    * @constructor
    * @param {Object.<string, Server~RpcHandler>} api - Map of methods to message handler functions
@@ -240,8 +245,8 @@ class Client extends EventEmitter {
    */
 
   /**
-   * Implementation of a mascara client. Connects to a mascara {@link Server} and 
-   * automatically transforms stream arguments into mascara:// links and vice-versa.
+   * Implementation of a scarf client. Connects to a scarf {@link Server} and 
+   * automatically transforms stream arguments into scarf:// links and vice-versa.
    * @extends EventEmitter
    * @constructor
    * @param {Client~createClient} [createClient=new net.Socket()] - Function returning a Duplex stream
@@ -279,10 +284,10 @@ class Client extends EventEmitter {
 
       if (result) {
         for (let p = 0; p < result.length; p++) {
-          if (typeof result[p] === 'string' && result[p].includes('mascara://')) {
+          if (typeof result[p] === 'string' && result[p].includes('scarf://')) {
             const parsedUrl = new URL(result[p]);
             let [id, streamType] = parsedUrl.hostname.split('.');
-            let pointer = `mascara://${id}.${streamType}`;
+            let pointer = `scarf://${id}.${streamType}`;
             let stream = null;
 
             if (streamType === 'writable') {
@@ -373,7 +378,7 @@ class Client extends EventEmitter {
    */
 
   /**
-   * Constructs a mascara message from the given arguents and handles the response
+   * Constructs a scarf message from the given arguents and handles the response
    * @param {string} method - JSON-RPC method name
    * @param {Array.<(string|array|boolean|object|number|Stream)>} params - Data to send the server
    * @param {Client~invokeCallback} [callback] - Handle the results returned from the server

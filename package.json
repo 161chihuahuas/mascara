@@ -1,7 +1,7 @@
 {
-  "name": "@tacticalchihuahua/mascara",
+  "name": "@tacticalchihuahua/scarf",
   "version": "1.0.0",
-  "description": "make a stream context an rpc argument",
+  "description": "stream chunks as rpc frames",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -39,7 +39,6 @@
     "sinon": "^20.0.0"
   },
   "dependencies": {
-    "jsonrpc-lite": "^1.2.3",
-    "uuid": "^3.0.1"
+    "jsonrpc-lite": "^1.2.3"
   }
 }
