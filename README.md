@@ -1,7 +1,7 @@
 # 🧣 scarf ~ *stream chunks as rpc frames* 
 
 ```
-npm install @tacticalchihuahua/scarf --save
+npm install @yipyap/scarf --save
 ```
 
 ## what
@@ -45,7 +45,7 @@ at the protocol level instead of application level.
 
 ```js
 const { Readable } = require('stream');
-const { Server } = require('@tacticalchihuahua/scarf');
+const { Server } = require('@yipyap/scarf');
 
 const server = new Server({
   echo: function(data, callback) {
@@ -60,7 +60,7 @@ server.listen(8080);
 ### example: client
 
 ```js
-const scarf = require('@tacticalchihuahua/scarf');
+const scarf = require('@yipyap/scarf');
 const client = new scarf.Client();
 
 client.connect(8080);
@@ -71,5 +71,5 @@ client.invoke('echo', ['hello world'], (err, stream) => {
 
 ## license
 
-anti-copyright 2025, tactical chihuahua  
+anti-copyright 2025, chihuahua.rodeo  
 released under gnu lesser general public license 3
