@@ -23,7 +23,7 @@
     "ipc",
     "streams"
   ],
-  "author": "chihuahua.rodeo <161chihuahuas@disroot.org>",
+  "author": "yipsec <161chihuahuas@disroot.org>",
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/161chihuahua/mascara/issues"

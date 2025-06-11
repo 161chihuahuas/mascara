@@ -71,5 +71,5 @@ client.invoke('echo', ['hello world'], (err, stream) => {
 
 ## license
 
-anti-copyright 2025, chihuahua.rodeo  
+anti-copyright 2025, yipsec  
 released under gnu lesser general public license 3
