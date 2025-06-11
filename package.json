@@ -1,5 +1,5 @@
 {
-  "name": "@yipyap/scarf",
+  "name": "@yipsec/scarf",
   "version": "1.0.0",
   "description": "stream chunks as rpc frames",
   "main": "index.js",
